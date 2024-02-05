@@ -17,6 +17,11 @@ jobs:
         run: |
           pip install pytest
           pip install flake8
+      - name: Display working directory content
+        run: ls -R
+
+      - name: Display absolute path of the test file
+        run: echo $(pwd)/file_test.py
 
       - name: Run tests
         run: |
