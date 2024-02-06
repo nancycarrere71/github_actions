@@ -19,7 +19,10 @@ jobs:
           pip install flake8
 
       - name: Display working directory content
-        run: ls -R
+        run: ls -la
+
+      - name: display path
+        run: pwd
 
       - name: Display absolute path of the test file
         run: echo $(pwd)/file_test.py
