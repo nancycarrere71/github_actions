@@ -24,12 +24,13 @@ jobs:
       - name: display path
         run: pwd
 
+
       - name: Display absolute path of the test file
         run: echo $(pwd)/file_test.py
 
       - name: Run tests
         run: |
-          pytest
+          pytest /home/ubuntu/github_actions/.github/workflows/file_test.py
 
       - name: Run flake8
         uses: py-actions/flake8@v2
